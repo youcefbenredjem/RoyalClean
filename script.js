@@ -167,6 +167,6 @@ function sendWhatsApp() {
     message += `${index + 1}. ${item.selectedType}\n   📏 ${item.length}×${item.width}م | الشكل: ${item.shape || 'غير محدد'} | العدد: ${item.quantity}\n`;
   });
 
-  const phoneNumber = '213666530413'; // استبدل برقمك
+  const phoneNumber = '213557808426'; // استبدل برقمك
   window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
 }
