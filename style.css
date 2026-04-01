@@ -771,6 +771,22 @@ input:focus {
   opacity: 0.7;
 }
 
+.developer-credit {
+  margin-top: 10px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+.developer-link {
+  color: #7dd3fc;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.developer-link:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero {
