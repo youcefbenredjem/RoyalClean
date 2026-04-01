@@ -1,0 +1,8 @@
+|-- index.html
+|-- kanich.png
+|-- other.png
+|-- profile.png
+|-- script.js
+|-- souf.jpg
+|-- style.css
+|-- tra.png

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="خدمة رويال لغسيل الزرابي - عناية فائقة وفخامة تستحقها">
+  <title>رويال كلين | غسل الزرابي الفاخر</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ambient-glow"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="logo-icon">✨</div>
+      <div class="brand-text">
+        <h1>رويال كلين</h1>
+        <p class="tag">عناية تليق بفخامة منزلك</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="headerCartBtn" class="cart-btn" aria-label="السلة">
+        <span class="cart-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        </span>
+        <span class="btn-text">طلباتي</span>
+        <span id="cartCount" class="badge">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="hero-content">
+      <div class="luxury-badge">جودة مضمونة 100%</div>
+      <h2>إعادة الحيوية<br> <span class="text-gold">لزرابيك الفاخرة</span></h2>
+      <p>نحن لا نغسل السجاد فحسب، بل نعتني بأدق تفاصيل النسيج باستخدام تقنيات البخار الحديثة والمواد العضوية الآمنة.</p>
+      <div class="cta-group">
+        <a class="btn primary hero-cta" href="#catalog">اطلب الخدمة الآن</a>
+        <div class="trust-indicators">
+          <span>⭐ 4.9 تقييم العملاء</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="circle-backdrop"></div>
+      <img src="profile.png" alt="غسيل سجاد احترافي">
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-item">
+      <div class="icon">💎</div>
+      <h3>عناية دقيقة</h3>
+      <p>مواد خاصة للصوف والحرير</p>
+    </div>
+    <div class="feature-item">
+      <div class="icon">🚀</div>
+      <h3>استلام وتوصيل</h3>
+      <p>خدمة سريعة من باب منزلك</p>
+    </div>
+    <div class="feature-item">
+      <div class="icon">🛡️</div>
+      <h3>تعقيم شامل</h3>
+      <p>قضاء تام على البكتيريا</p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="catalog">
+    <h2 class="section-title">باقات العناية</h2>
+    <div class="grid">
+      <article class="card" onclick="openModal('زربية صوف فاخرة')">
+        <div class="card-image">
+          <img src="souf.jpg" alt="زربية صوف">
+          <span class="overlay-text">اختر</span>
+        </div>
+        <div class="card-body">
+          <h3>زربية صوف</h3>
+          <p>غسيل جاف وعناية بالألياف</p>
+        </div>
+      </article>
+
+      <article class="card" onclick="openModal('زربية كانيش')">
+        <div class="card-image">
+          <img src="kanich.png" alt="زربية حرير">
+           <span class="overlay-text">اختر</span>
+        </div>
+        <div class="card-body">
+          <h3>زربية كانيش</h3>
+          <p>تنظيف دقيق يحفظ اللمعان</p>
+        </div>
+      </article>
+
+      <article class="card" onclick="openModal('زربية تقليدية عتيقة')">
+        <div class="card-image">
+          <img src="tra.png" alt="زربية تقليدية">
+           <span class="overlay-text">اختر</span>
+        </div>
+        <div class="card-body">
+          <h3>زربية تقليدية</h3>
+          <p>حماية للألوان والرسومات</p>
+        </div>
+      </article>
+      <article class="card" onclick="openModal('أخرى')">
+        <div class="card-image">
+          <img src="other.png" alt="باقة أخرى">
+           <span class="overlay-text">اختر</span>
+        </div>
+        <div class="card-body">
+          <h3>باقة أخرى</h3>
+          <p>أدخل نوع الزربية واختر الشكل</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" onclick="closeModal()"></div>
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close" aria-label="إغلاق" onclick="closeModal()">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      
+      <div class="modal-header">
+        <span class="modal-subtitle">تفاصيل الطلب</span>
+        <h2 id="carpetType">نوع الزربية</h2>
+      </div>
+
+      <div class="form-group">
+        <label>الأبعاد (متر)</label>
+        <div class="row inputs-row">
+          <div class="input-wrapper">
+            <input type="number" id="length" placeholder="0" min="0">
+            <span class="unit">طول</span>
+          </div>
+          <div class="times-sign">×</div>
+          <div class="input-wrapper">
+            <input type="number" id="width" placeholder="0" min="0">
+             <span class="unit">عرض</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>العدد</label>
+        <input type="number" id="quantity" class="full-width" placeholder="عدد الزرابي" min="1" value="1">
+      </div>
+
+      <div class="form-group">
+        <label>الشكل</label>
+        <div class="shape-options">
+          <label><input type="radio" name="shape" value="دائري" checked> دائري</label>
+          <label><input type="radio" name="shape" value="مستطيل"> مستطيل</label>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn primary block" onclick="addToCart()">إضافة للقائمة</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="customer-section">
+    <div class="customer-card">
+      <h3>بيانات التوصيل</h3>
+      <p class="sub-text">أدخل بياناتك وسيتم تحويلك لواتساب لإتمام الاتفاق</p>
+      
+      <div class="input-group">
+        <input type="text" id="name" placeholder=" ">
+        <label for="name">الاسم الكريم</label>
+      </div>
+      
+      <div class="row">
+        <div class="input-group">
+          <input type="tel" id="phone" placeholder=" ">
+          <label for="phone">رقم الهاتف</label>
+        </div>
+        <div class="input-group">
+          <input type="text" id="address" placeholder=" ">
+          <label for="address">العنوان (الولاية/البلدية)</label>
+        </div>
+      </div>
+      
+      <button class="btn whatsapp-btn" onclick="sendWhatsApp()">
+        <span>تأكيد وإرسال عبر واتساب</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2024 رويال كلين — خدمة غسل الزرابي</p>
+    <p class="credit">الفخامة في كل تفصيل</p>
+  </div>
+</footer>
+
+<div id="cartPanel" class="cart-panel" aria-hidden="true">
+  <div class="cart-panel-backdrop" onclick="closeCartPanel()"></div>
+  <div class="cart-panel-inner">
+    <div class="panel-header">
+      <h3>سلة الطلبات</h3>
+      <button class="panel-close" onclick="closeCartPanel()">×</button>
+    </div>
+    <div class="panel-body">
+      <ul id="panelCartItems"></ul>
+    </div>
+    <div class="panel-footer">
+      <button class="btn ghost block" onclick="closeCartPanel()">متابعة التصفح</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
